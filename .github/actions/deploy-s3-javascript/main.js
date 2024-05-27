@@ -23,7 +23,7 @@ function run() {
   exec.exec(`aws s3 sync ${distFolder} s3://${bucket} --region ${bucketRegion}`);
 
   //3) Set output get website url
-  const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
+  const websiteUrl = `http://${bucket}.s3-website.${bucketRegion}.amazonaws.com`;
   //http://vj-gha-custom-action-hosting.s3-website.ap-south-1.amazonaws.com
   core.setOutput('website-url', websiteUrl);
 
