@@ -1,5 +1,18 @@
 name: 'Deploy to AWS S3'
 description: 'Deploy a static website to AWS S3 from a GitHub repository actions'
+inputs:
+    bucket-name:
+        description: 'S3 bucket name'
+        required: true
+    bucket-region:
+        description: 'S3 bucket region'
+        required: false
+        default: 'us-east-1'
+    dist-folder:
+        description: 'Folder containing the files to deploy'
+        required: true 
+
 runs:
     using: 'node16'
     main: 'main.js'
+
