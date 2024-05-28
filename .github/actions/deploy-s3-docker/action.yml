@@ -1,7 +1,7 @@
 name: 'Deploy to AWS S3'
 description: 'Deploy a static website to AWS S3 from a GitHub repository actions'
 inputs:
-    bucket:
+    bucket-name:
         description: 'S3 bucket name'
         required: true
     bucket-region:
